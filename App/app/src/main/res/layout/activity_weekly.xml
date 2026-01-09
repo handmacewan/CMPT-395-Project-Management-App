@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient6"
+    android:orientation="vertical"
+    tools:context=".Weekly">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="previousWeekAction"
+            android:text="@string/back"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:iconTintMode="src_atop" />
+
+        <TextView
+            android:id="@+id/monthYearTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="sans-serif-light"
+            android:text="Feb 2021"
+            android:textAlignment="center"
+            android:textColor="#656068"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:onClick="nextWeekAction"
+            android:text="@string/next"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ECEAEA"
+            android:text="@string/sun"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/monday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ECEAEA"
+            android:text="@string/mon"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ECEAEA"
+            android:text="@string/tue"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/wednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ECEAEA"
+            android:text="@string/wed"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ECEAEA"
+            android:text="@string/thu"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ECEAEA"
+            android:text="@string/fri"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/saturday"
+            android:layout_width="23dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ECEAEA"
+            android:text="@string/sat"
+            android:textAlignment="textStart" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendarRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_weight="1"
+        android:background="@drawable/gradient3">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/assign_shift"
+            android:layout_width="189dp"
+            android:layout_height="61dp"
+            android:layout_weight="1"
+            android:backgroundTint="#80E8E9EA"
+            android:text="Assign"
+            android:textColor="#B0000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:icon="@drawable/addsched"
+            app:iconSize="30dp"
+            app:iconTint="@color/purple_500" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/delete_shift"
+            android:layout_width="181dp"
+            android:layout_height="61dp"
+            android:layout_weight="1"
+            android:backgroundTint="#7CE8E9EA"
+            android:text="Delete"
+            android:textColor="#AD020202"
+            android:textStyle="bold"
+            app:icon="@drawable/delete"
+            app:iconSize="46dp"
+            app:iconTint="@color/purple_500"
+            app:srcCompat="@android:drawable/ic_menu_delete"
+            tools:srcCompat="@android:drawable/ic_menu_delete" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/eventListView"
+        android:layout_width="match_parent"
+        android:layout_height="408dp"
+        android:layout_weight="5" />
+
+</LinearLayout>
+
+
